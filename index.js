@@ -5,7 +5,7 @@ const rafThrottle = callback => {
 
   const later = args => () => {
     requestId = null
-    callback.apply(this, args)
+    callback(...args)
   }
 
   return (...args) => {
