@@ -4,7 +4,7 @@
   "description": "Throttle a function by requestAnimationFrame",
   "main": "lib/index.js",
   "scripts": {
-    "test": "ava",
+    "test": "ava --timeout 10000",
     "test:coverage": "nyc npm test",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "build": "NODE_ENV=production babel index.js --out-dir lib",
