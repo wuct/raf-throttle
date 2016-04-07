@@ -1,6 +1,6 @@
 {
   "name": "raf-throttle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Throttle a function by requestAnimationFrame",
   "main": "lib/index.js",
   "scripts": {
