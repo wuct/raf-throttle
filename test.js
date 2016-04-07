@@ -28,7 +28,7 @@ test.cb('call the callback with arguments', t => {
   throttled(...args)
 
   raf(() => {
-    t.same(callbackSpy.args[0], args)
+    t.deepEqual(callbackSpy.args[0], args)
     t.end()
   })
 })
