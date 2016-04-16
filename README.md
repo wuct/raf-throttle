@@ -15,7 +15,7 @@
 
 ## Usage
 
-```
+```js
 import throttle from 'raf-throttle'
 
 const throttled = throttle(updatePosition)
