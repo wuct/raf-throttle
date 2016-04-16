@@ -4,7 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/raf-throttle.svg)](https://www.npmjs.com/package/raf-throttle)
 [![Travis](https://img.shields.io/travis/wuct/raf-throttle.svg)](https://travis-ci.org/wuct/raf-throttle)
-[![Codecov](https://img.shields.io/codecov/c/github/wuct/raf-throttle.svg?maxAge=2592000)](https://codecov.io/github/wuct/raf-throttle)
+[![Codecov](https://img.shields.io/codecov/c/github/wuct/raf-throttle.svg)](https://codecov.io/github/wuct/raf-throttle)
 [![Code Climate](https://img.shields.io/codeclimate/github/wuct/raf-throttle.svg)](https://codeclimate.com/github/wuct/raf-throttle)
 
 [raf-throttle](https://www.npmjs.com/package/raf-throttle) let you create a throttled function, which only invokes the passed function at most once per [animation frame](https://developer.mozilla.org/en/docs/Web/API/window/requestAnimationFrame) on a browser or per 1000/60 ms on Node.
