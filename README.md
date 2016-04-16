@@ -19,12 +19,44 @@
 
 Avoid excessively updating the position while scrolling.
 
+#### JS
+
 ```js
 import throttle from 'raf-throttle'
 
 const throttled = throttle(updatePosition)
 window.addEventListener('scroll', throttled)
 ```
+
+#### jQuery
+
+```js
+import throttle from 'raf-throttle'
+
+$(window).on('scroll', throttle(updatePosition))
+```
+
+#### React
+
+```js
+import React from 'react'
+import throttle from 'raf-throttle'
+
+class extends React.Component {
+  onScroll = throttle(updatePosition)
+
+  componentDidMount = () =>
+    window.addEventListener('scroll', this.onScroll)
+
+  componentWillUnmount = () =>
+    window.removeEventListener('scroll', this.onScroll)
+
+  render = () =>
+    /* Your code */
+}
+```
+
+If you think the React code is verbose and you want to move them into a higher-order component, you shoul take a look at [`react-dom-utils`](https://github.com/wuct/react-dom-utils), which has done this for you.
 
 ### Canceling
 
@@ -49,10 +81,6 @@ import throttle from 'raf-throttle'
 #### `throttled.cancel()`
 
 Cancel the trailing throttled invocation.
-
-
-
-
 
 ## Contributing
 
