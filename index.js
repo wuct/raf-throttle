@@ -8,11 +8,16 @@ const rafThrottle = callback => {
     callback(...args)
   }
 
-  return (...args) => {
+  const throttled = (...args) => {
     if (requestId == null) {
       requestId = raf(later(args))
     }
   }
+
+  throttled.cancel = () =>
+    raf.cancel(requestId)
+
+  return throttled;
 }
 
 export default rafThrottle
