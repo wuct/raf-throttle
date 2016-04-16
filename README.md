@@ -42,10 +42,12 @@ throttled.cancel() // foo would never be invoked
 import throttle from 'raf-throttle'
 ```
 
-### `const throttled = throttle(callback)`
+#### `const throttled = throttle(callback)`
+
 `callback` is the function to be throttled by [`requestAnimationFrame`](https://developer.mozilla.org/en/docs/Web/API/window/requestAnimationFrame).
 
-### `throttled.cancel()`
+#### `throttled.cancel()`
+
 Cancel the trailing throttled invocation.
 
 
