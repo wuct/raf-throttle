@@ -1,7 +1,7 @@
 import test from 'ava'
 import { spy } from 'sinon'
 import raf from 'raf'
-import throttle from './'
+import throttle from './index.js'
 
 test.cb('throttle', t => {
   t.plan(1)
@@ -50,5 +50,18 @@ test.cb('more throttles', t => {
       t.is(callbackSpy.callCount, 2)
       t.end()
     })
+  })
+})
+
+test.cb(' Cancel the trailing throttled invocation', t => {
+  const callbackSpy = spy()
+
+  const throttled = throttle(callbackSpy)
+  throttled()
+  throttled.cancel()
+
+  raf(() => {
+    t.is(callbackSpy.callCount, 0)
+    t.end()
   })
 })
