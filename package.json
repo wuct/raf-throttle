@@ -6,7 +6,7 @@
   "scripts": {
     "test": "ava --timeout 10000",
     "test:coverage": "nyc npm test",
-    "coverage": "nyc report --reporter=lcov && codecov",
+    "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "build": "NODE_ENV=production babel index.js --out-dir lib",
     "prepublish": "npm run build"
   },
