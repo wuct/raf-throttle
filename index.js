@@ -17,7 +17,7 @@ const rafThrottle = callback => {
   throttled.cancel = () =>
     raf.cancel(requestId)
 
-  return throttled;
+  return throttled
 }
 
 export default rafThrottle
