@@ -1,5 +1,3 @@
-import raf from 'raf'
-
 const rafThrottle = callback => {
   let requestId
 
@@ -10,12 +8,12 @@ const rafThrottle = callback => {
 
   const throttled = (...args) => {
     if (requestId == null) {
-      requestId = raf(later(args))
+      requestId = requestAnimationFrame(later(args))
     }
   }
 
   throttled.cancel = () =>
-    raf.cancel(requestId)
+    cancelAnimationFrame(requestId)
 
   return throttled
 }

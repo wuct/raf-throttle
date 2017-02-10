@@ -3,6 +3,8 @@ import { spy } from 'sinon'
 import raf from 'raf'
 import throttle from './index.js'
 
+raf.polyfill();
+
 test.cb('throttle', t => {
   t.plan(1)
 
