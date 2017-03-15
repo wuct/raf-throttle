@@ -9,6 +9,8 @@
 
 [raf-throttle](https://www.npmjs.com/package/raf-throttle) let you create a throttled function, which only invokes the passed function at most once per [animation frame](https://developer.mozilla.org/en/docs/Web/API/window/requestAnimationFrame) on a browser or per 1000/60 ms on Node.
 
+## [Demo](https://jsfiddle.net/mxbnpwp0/)
+
 ## Installation
 
 ### npm
