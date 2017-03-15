@@ -1,7 +1,7 @@
 import test from 'ava'
 import { spy } from 'sinon'
 import raf from 'raf'
-import throttle from './index.js'
+import throttle from './rafThrottle.js'
 
 raf.polyfill();
 
