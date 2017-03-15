@@ -11,9 +11,25 @@
 
 ## Installation
 
+### npm
+
 `npm install raf-throttle --save`
 
+### yarn
+
+`yarn add raf-throttle`
+
+### CDN
+
+Download the file from [https://unpkg.com/raf-throttle/umd/rafThrottle.min.js](),
+
+and consume it from global as `rafThrottle`.
+
 ## Usage
+
+### Polyfill
+
+Since [most of browsers](http://caniuse.com/#feat=requestanimationframe) support `requestAnimationFrame` by default, you can use `raf-throttle` directly. However, if you want to support old browsers, you will need to polyfill `requestAnimationFrame` by youself. One option is using [`raf`](https://www.npmjs.com/package/raf).
 
 ### Example
 
@@ -63,7 +79,7 @@ If you think the React code is verbose and you want to move them into a higher-o
 Cancel the trailing throttled invocation.
 
 ```js
-const throttled = throttle(foo) 
+const throttled = throttle(foo)
 throttled()
 throttled.cancel() // foo would never be invoked
 ```
@@ -91,4 +107,3 @@ Cancel the trailing throttled invocation.
 ## [CHANGELOG](CHANGELOG.md)
 
 ## [LICENSE](LICENSE)
-
