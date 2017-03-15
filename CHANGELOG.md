@@ -4,7 +4,7 @@
 
 
 ## [v2.0.2]
-> March 15, 2015
+> March 15, 2017
 
 - Fix umd/rafThrottle.min.js.
 
@@ -12,7 +12,7 @@
 
 
 ## [v2.0.0]
-> March 15, 2015
+> March 15, 2017
 
 - Support for UMD build. Now we can use rafThrottle from CDN. ✌️
 - __Breaking:__ Remove `raf` dependency. You will need to add polyfill for it, if you want to support old browsers. ([@bfred-it](https://github.com/bfred-it) in [#16](https://github.com/wuct/raf-throttle/pull/16))
