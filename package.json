@@ -9,8 +9,9 @@
     "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "clean": "rm -rf lib & rm -rf umd",
     "build:CommonJS": "NODE_ENV=production babel --out-dir lib rafThrottle.js",
-    "build:UMD": "mkdir umd && NODE_ENV=umd babel --out-file umd/rafThrottle.min.js rafThrottle.js",
-    "build": "npm run build:CommonJS & npm run build:UMD",
+    "build:minifiedUMD": "NODE_ENV=minumd babel --out-file umd/rafThrottle.min.js rafThrottle.js",
+    "build:UMD": "NODE_ENV=umd babel --out-file umd/rafThrottle.js rafThrottle.js",
+    "build": "npm run build:CommonJS && mkdir umd && npm run build:UMD && npm run build:minifiedUMD",
     "prebuild": "npm run clean",
     "prepublish": "npm run build"
   },
