@@ -6,13 +6,6 @@
         "add-module-exports",
         "transform-es2015-modules-umd"
       ]
-    },
-    "minumd": {
-      "presets": ["babili"],
-      "plugins": [
-        "add-module-exports",
-        "transform-es2015-modules-umd"
-      ]
     }
   }
 }
