@@ -15,7 +15,7 @@
 > March 15, 2015
 
 - Support for UMD build. Now we can use rafThrottle from CDN. ✌️
-- __Breaking:__ Remove `raf` dependency. You will need to add polyfill for it, if you want to support old browsers. thanks to [@bfred-it](https://github.com/bfred-it)
+- __Breaking:__ Remove `raf` dependency. You will need to add polyfill for it, if you want to support old browsers. ([@bfred-it](https://github.com/bfred-it) in [#16](https://github.com/wuct/raf-throttle/pull/16))
 
 [v2.0.0]: https://github.com/wuct/raf-throttle/compare/v2.0.0...v1.1.1
 
