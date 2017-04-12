@@ -7,7 +7,7 @@ const rafThrottle = callback => {
   }
 
   const throttled = (...args) => {
-    if (requestId == null) {
+    if ((requestId === null) || (requestId === undefined)) {
       requestId = requestAnimationFrame(later(args))
     }
   }
