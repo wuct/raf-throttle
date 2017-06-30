@@ -54,7 +54,6 @@ test.cb('preserve the context of the last call', t => {
   })
 })
 
-
 test.cb('more throttles', t => {
   t.plan(1)
 
