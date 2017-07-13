@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/wuct/raf-throttle#readme",
   "devDependencies": {
-    "ava": "^0.20.0",
+    "ava": "^0.21.0",
     "babel-cli": "^6.7.5",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.0",
