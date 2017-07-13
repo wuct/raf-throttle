@@ -1,18 +1,15 @@
 const rafThrottle = callback => {
   let requestId
-  let context
 
-  const later = args => () => {
+  const later = (context, args) => () => {
     requestId = null
     callback.apply(context, args)
-    context = null
   }
 
   const throttled = function(...args) {
     if ((requestId === null) || (requestId === undefined)) {
-      requestId = requestAnimationFrame(later(args))
+      requestId = requestAnimationFrame(later(this, args))
     }
-    context = this
   }
 
   throttled.cancel = () =>

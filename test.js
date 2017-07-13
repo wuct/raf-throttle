@@ -35,7 +35,7 @@ test.cb('call the callback with arguments', t => {
   })
 })
 
-test.cb('preserve the context of the last call', t => {
+test.cb('preserve the context of the first call', t => {
   t.plan(1)
 
   const callbackSpy = spy()
@@ -49,7 +49,7 @@ test.cb('preserve the context of the last call', t => {
   c2.throttled()
 
   raf(() => {
-    t.is(callbackSpy.thisValues[0], c2)
+    t.is(callbackSpy.thisValues[0], c1)
     t.end()
   })
 })
