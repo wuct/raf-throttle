@@ -35,6 +35,25 @@ test.cb('call the callback with arguments', t => {
   })
 })
 
+test.cb('preserve the context of the first call', t => {
+  t.plan(1)
+
+  const callbackSpy = spy()
+
+  const throttled = throttle(callbackSpy)
+
+  const c1 = { throttled }
+  const c2 = { throttled }
+
+  c1.throttled()
+  c2.throttled()
+
+  raf(() => {
+    t.is(callbackSpy.thisValues[0], c1)
+    t.end()
+  })
+})
+
 test.cb('more throttles', t => {
   t.plan(1)
 
