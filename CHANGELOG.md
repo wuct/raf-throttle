@@ -3,6 +3,14 @@
 [HEAD]: https://github.com/wuct/raf-throttle/compare/latest...HEAD
 
 
+## [v2.0.3]
+> July 14, 2017
+
+- Preserver `this`. ([@QuentinRoy](https://github.com/QuentinRoy) in [#36](https://github.com/wuct/raf-throttle/pull/36))
+
+[v2.0.3]: https://github.com/wuct/raf-throttle/compare/v2.0.3...v2.0.2
+
+
 ## [v2.0.2]
 > March 15, 2017
 
