@@ -23,7 +23,7 @@
 
 ### CDN
 
-Download the file from [https://unpkg.com/raf-throttle/umd/rafThrottle.min.js](),
+Download the file from [https://unpkg.com/raf-throttle/umd/rafThrottle.min.js](https://unpkg.com/raf-throttle/umd/rafThrottle.min.js),
 
 and consume it from global as `rafThrottle`.
 
