@@ -1,12 +1,11 @@
-import test from 'ava'
 import { spy } from 'sinon'
 import raf from 'raf'
 import throttle from './rafThrottle.js'
 
 raf.polyfill();
 
-test.cb('throttle', t => {
-  t.plan(1)
+test('throttle', done => {
+  expect.assertions(1)
 
   const callbackSpy = spy()
 
@@ -15,13 +14,13 @@ test.cb('throttle', t => {
   throttled()
 
   raf(() => {
-    t.is(callbackSpy.callCount, 1)
-    t.end()
+    expect(callbackSpy.callCount).toBe(1)
+    done()
   })
 })
 
-test.cb('call the callback with arguments', t => {
-  t.plan(1)
+test('call the callback with arguments', done => {
+  expect.assertions(1)
 
   const callbackSpy = spy()
   const args = ['foo', 'bar']
@@ -30,13 +29,13 @@ test.cb('call the callback with arguments', t => {
   throttled(...args)
 
   raf(() => {
-    t.deepEqual(callbackSpy.args[0], args)
-    t.end()
+    expect(callbackSpy.args[0]).toEqual(args)
+    done()
   })
 })
 
-test.cb('preserve the context of the first call', t => {
-  t.plan(1)
+test('preserve the context of the first call', done => {
+  expect.assertions(1)
 
   const callbackSpy = spy()
 
@@ -49,13 +48,13 @@ test.cb('preserve the context of the first call', t => {
   c2.throttled()
 
   raf(() => {
-    t.is(callbackSpy.thisValues[0], c1)
-    t.end()
+    expect(callbackSpy.thisValues[0]).toBe(c1)
+    done()
   })
 })
 
-test.cb('more throttles', t => {
-  t.plan(1)
+test('more throttles', done => {
+  expect.assertions(1)
 
   const callbackSpy = spy()
 
@@ -68,13 +67,13 @@ test.cb('more throttles', t => {
     throttled()
 
     raf(() => {
-      t.is(callbackSpy.callCount, 2)
-      t.end()
+      expect(callbackSpy.callCount).toBe(2)
+      done()
     })
   })
 })
 
-test.cb(' Cancel the trailing throttled invocation', t => {
+test(' Cancel the trailing throttled invocation', done => {
   const callbackSpy = spy()
 
   const throttled = throttle(callbackSpy)
@@ -82,7 +81,7 @@ test.cb(' Cancel the trailing throttled invocation', t => {
   throttled.cancel()
 
   raf(() => {
-    t.is(callbackSpy.callCount, 0)
-    t.end()
+    expect(callbackSpy.callCount).toBe(0)
+    done()
   })
 })
