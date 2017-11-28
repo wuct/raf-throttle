@@ -1,4 +1,3 @@
-import { spy } from 'sinon'
 import raf from 'raf'
 import throttle from './rafThrottle.js'
 
@@ -7,14 +6,14 @@ raf.polyfill();
 test('throttle', done => {
   expect.assertions(1)
 
-  const callbackSpy = spy()
+  const callbackSpy = jest.fn()
 
   const throttled = throttle(callbackSpy)
   throttled()
   throttled()
 
   raf(() => {
-    expect(callbackSpy.callCount).toBe(1)
+    expect(callbackSpy.mock.calls.length).toBe(1)
     done()
   })
 })
@@ -22,14 +21,14 @@ test('throttle', done => {
 test('call the callback with arguments', done => {
   expect.assertions(1)
 
-  const callbackSpy = spy()
+  const callbackSpy = jest.fn()
   const args = ['foo', 'bar']
 
   const throttled = throttle(callbackSpy)
   throttled(...args)
 
   raf(() => {
-    expect(callbackSpy.args[0]).toEqual(args)
+    expect(callbackSpy.mock.calls[0]).toEqual(args)
     done()
   })
 })
@@ -37,7 +36,7 @@ test('call the callback with arguments', done => {
 test('preserve the context of the first call', done => {
   expect.assertions(1)
 
-  const callbackSpy = spy()
+  const callbackSpy = jest.fn()
 
   const throttled = throttle(callbackSpy)
 
@@ -48,7 +47,7 @@ test('preserve the context of the first call', done => {
   c2.throttled()
 
   raf(() => {
-    expect(callbackSpy.thisValues[0]).toBe(c1)
+    expect(callbackSpy.mock.instances[0]).toBe(c1)
     done()
   })
 })
@@ -56,7 +55,7 @@ test('preserve the context of the first call', done => {
 test('more throttles', done => {
   expect.assertions(1)
 
-  const callbackSpy = spy()
+  const callbackSpy = jest.fn()
 
   const throttled = throttle(callbackSpy)
   throttled()
@@ -67,21 +66,23 @@ test('more throttles', done => {
     throttled()
 
     raf(() => {
-      expect(callbackSpy.callCount).toBe(2)
+      expect(callbackSpy.mock.calls.length).toBe(2)
       done()
     })
   })
 })
 
-test(' Cancel the trailing throttled invocation', done => {
-  const callbackSpy = spy()
+test('cancel the trailing throttled invocation', done => {
+  expect.assertions(1)
+
+  const callbackSpy = jest.fn()
 
   const throttled = throttle(callbackSpy)
   throttled()
   throttled.cancel()
 
   raf(() => {
-    expect(callbackSpy.callCount).toBe(0)
+    expect(callbackSpy.mock.calls.length).toBe(0)
     done()
   })
 })
