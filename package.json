@@ -4,7 +4,7 @@
   "description": "Throttle a function by requestAnimationFrame",
   "main": "lib/rafThrottle.js",
   "scripts": {
-    "test": "ava --timeout 10000",
+    "test": "jest",
     "test:coverage": "nyc npm test",
     "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "clean": "rm -rf lib & rm -rf umd",
@@ -31,7 +31,6 @@
   },
   "homepage": "https://github.com/wuct/raf-throttle#readme",
   "devDependencies": {
-    "ava": "^0.23.0",
     "babel-cli": "^6.7.5",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.0",
@@ -40,9 +39,9 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.6.5",
     "codecov": "^3.0.0",
+    "jest": "^21.2.1",
     "nyc": "^11.0.1",
     "raf": "^3.2.0",
-    "sinon": "^4.0.0",
     "uglify-js": "^3.0.16"
   },
   "ava": {
