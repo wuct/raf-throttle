@@ -4,8 +4,8 @@
   "description": "Throttle a function by requestAnimationFrame",
   "main": "lib/rafThrottle.js",
   "scripts": {
-    "test": "jest",
-    "coverage": "jest && codecov",
+    "test": "NODE_ENV=test jest",
+    "coverage": "npm run test && codecov",
     "clean": "rm -rf lib & rm -rf umd",
     "build:minifiedUMD": "uglifyjs -o umd/rafThrottle.min.js umd/rafThrottle.js",
     "build": "rollup -c && npm run build:minifiedUMD",
