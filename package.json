@@ -5,8 +5,7 @@
   "main": "lib/rafThrottle.js",
   "scripts": {
     "test": "jest",
-    "test:coverage": "nyc npm test",
-    "coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "coverage": "jest && codecov",
     "clean": "rm -rf lib & rm -rf umd",
     "build:CommonJS": "NODE_ENV=production babel --out-dir lib rafThrottle.js",
     "build:UMD": "NODE_ENV=umd babel --out-file umd/rafThrottle.js rafThrottle.js",
@@ -39,18 +38,13 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.6.5",
     "codecov": "^3.0.0",
-    "jest": "^22.0.0",
+    "jest": "^23.2.0",
     "nyc": "^12.0.1",
     "raf": "^3.2.0",
     "uglify-js": "^3.0.16"
   },
-  "ava": {
-    "files": [
-      "test.js"
-    ],
-    "babel": "inherit",
-    "require": [
-      "babel-register"
-    ]
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
