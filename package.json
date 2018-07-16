@@ -34,13 +34,11 @@
     "jest": "^23.2.0",
     "raf": "^3.2.0",
     "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.7",
     "uglify-js": "^3.0.16"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
-  },
-  "dependencies": {
-    "rollup-plugin-babel": "^3.0.7"
   }
 }
