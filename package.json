@@ -33,7 +33,7 @@
     "codecov": "^3.0.0",
     "jest": "^23.2.0",
     "raf": "^3.2.0",
-    "rollup": "^0.63.0",
+    "rollup": "^0.64.0",
     "rollup-plugin-babel": "^3.0.7",
     "uglify-js": "^3.0.16"
   },
