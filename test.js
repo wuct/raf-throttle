@@ -86,3 +86,19 @@ test('cancel the trailing throttled invocation', done => {
     done()
   })
 })
+
+test('resume normal operation after canceling the trailing throttled invocation', done => {
+  expect.assertions(1)
+
+  const callbackSpy = jest.fn()
+
+  const throttled = throttle(callbackSpy)
+  throttled()
+  throttled.cancel()
+  throttled()
+
+  raf(() => {
+    expect(callbackSpy.mock.calls.length).toBe(1)
+    done()
+  })
+})

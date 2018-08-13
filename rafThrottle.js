@@ -12,8 +12,10 @@ const rafThrottle = callback => {
     }
   }
 
-  throttled.cancel = () =>
+  throttled.cancel = () => {
     cancelAnimationFrame(requestId)
+    requestId = null
+  }
 
   return throttled
 }
