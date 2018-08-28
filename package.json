@@ -34,7 +34,7 @@
     "jest": "^23.2.0",
     "raf": "^3.2.0",
     "rollup": "^0.64.0",
-    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-babel": "^4.0.1",
     "uglify-js": "^3.0.16"
   },
   "jest": {
