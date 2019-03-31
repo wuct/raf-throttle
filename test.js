@@ -52,6 +52,22 @@ test('preserve the context of the first call', done => {
   })
 })
 
+test('invokes the callback with the most recent args', done => {
+  expect.assertions(1)
+
+  const callbackSpy = jest.fn()
+
+  const throttled = throttle(callbackSpy)
+
+  throttled(1)
+  throttled(2)
+
+  raf(() => {
+    expect(callbackSpy).lastCalledWith(2);
+    done()
+  })
+})
+
 test('more throttles', done => {
   expect.assertions(1)
 
