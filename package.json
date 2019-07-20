@@ -28,14 +28,14 @@
   },
   "homepage": "https://github.com/wuct/raf-throttle#readme",
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "babel-jest": "^24.8.0",
     "codecov": "^3.5.0",
     "jest": "^24.8.0",
     "raf": "^3.4.1",
-    "rollup": "^1.16.4",
+    "rollup": "^1.17.0",
     "rollup-plugin-babel": "^4.3.3",
     "uglify-js": "^3.6.0"
   },
