@@ -3,8 +3,8 @@
 > Throttle a function by requestAnimationFrame
 
 [![npm](https://img.shields.io/npm/v/raf-throttle.svg)](https://www.npmjs.com/package/raf-throttle)
-[![Travis](https://img.shields.io/travis/wuct/raf-throttle.svg)](https://travis-ci.org/wuct/raf-throttle)
-[![Codecov](https://img.shields.io/codecov/c/github/wuct/raf-throttle.svg)](https://codecov.io/github/wuct/raf-throttle)
+[![Build Status](https://travis-ci.org/wuct/raf-throttle.svg?branch=master)](https://travis-ci.org/wuct/raf-throttle)
+[![codecov](https://codecov.io/gh/wuct/raf-throttle/branch/master/graph/badge.svg)](https://codecov.io/gh/wuct/raf-throttle) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
 [raf-throttle](https://www.npmjs.com/package/raf-throttle) let you create a throttled function, which only invokes the passed function at most once per [animation frame](https://developer.mozilla.org/en/docs/Web/API/window/requestAnimationFrame) on a browser or per 1000/60 ms on Node.
 
