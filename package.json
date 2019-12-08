@@ -28,9 +28,9 @@
   },
   "homepage": "https://github.com/wuct/raf-throttle#readme",
   "devDependencies": {
-    "@babel/cli": "7.6.4",
-    "@babel/core": "7.6.4",
-    "@babel/preset-env": "7.6.3",
+    "@babel/cli": "7.7.5",
+    "@babel/core": "7.7.5",
+    "@babel/preset-env": "7.7.6",
     "babel-jest": "24.9.0",
     "codecov": "3.6.1",
     "jest": "24.9.0",
