@@ -32,7 +32,7 @@
     "@babel/core": "7.7.5",
     "@babel/preset-env": "7.7.6",
     "babel-jest": "24.9.0",
-    "codecov": "3.6.1",
+    "codecov": "3.6.2",
     "jest": "24.9.0",
     "raf": "3.4.1",
     "rollup": "1.27.9",
