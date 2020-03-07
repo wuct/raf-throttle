@@ -36,7 +36,7 @@
     "jest": "25.1.0",
     "raf": "3.4.1",
     "rollup": "1.31.0",
-    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-babel": "4.4.0",
     "uglify-js": "3.7.7"
   },
   "jest": {
