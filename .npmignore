@@ -1,8 +1,6 @@
-index.js
+rafThrottle.js.js
 test.js
-.babelrc
-.editorconfig
-.eslintignore
-.eslintrc
-.npmignore
-.stylelintrc
+.*
+coverage
+rollup.config.js
+renovate.json
