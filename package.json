@@ -4,17 +4,18 @@
   "description": "Throttle a function by requestAnimationFrame",
   "main": "lib/rafThrottle.js",
   "scripts": {
-    "test": "NODE_ENV=test jest",
-    "coverage": "npm run test && codecov",
+    "test": "jest --coverage",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "clean": "rm -rf lib & rm -rf umd",
     "build:minifiedUMD": "uglifyjs -o umd/rafThrottle.min.js umd/rafThrottle.js",
     "build": "rollup -c && npm run build:minifiedUMD",
     "prebuild": "npm run clean",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wuct/raf-throttle.git"
+    "url": "https://github.com/wuct/raf-throttle.git"
   },
   "keywords": [
     "raf",
@@ -37,7 +38,8 @@
     "raf": "3.4.1",
     "rollup": "2.26.11",
     "rollup-plugin-babel": "4.4.0",
-    "uglify-js": "3.10.4"
+    "uglify-js": "3.10.4",
+    "semantic-release": "^17.1.1"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
