@@ -1,5 +1,7 @@
 ## [HEAD]
 
+## The CHANGELOG after v2.0.4 is moved to [the Github release page](https://github.com/wuct/raf-throttle/releases).
+
 [HEAD]: https://github.com/wuct/raf-throttle/compare/latest...HEAD
 
 
