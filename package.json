@@ -34,7 +34,7 @@
     "@babel/preset-env": "7.11.5",
     "babel-jest": "26.5.2",
     "codecov": "3.8.0",
-    "jest": "26.5.0",
+    "jest": "26.5.2",
     "raf": "3.4.1",
     "rollup": "2.28.2",
     "rollup-plugin-babel": "4.4.0",
