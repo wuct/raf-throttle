@@ -39,7 +39,7 @@
     "rollup": "2.47.0",
     "rollup-plugin-babel": "4.4.0",
     "uglify-js": "3.13.6",
-    "semantic-release": "17.4.2"
+    "semantic-release": "17.4.3"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
