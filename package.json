@@ -3,6 +3,7 @@
   "version": "2.0.3",
   "description": "Throttle a function by requestAnimationFrame",
   "main": "lib/rafThrottle.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "jest --coverage",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
