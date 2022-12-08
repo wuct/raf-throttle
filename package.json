@@ -37,7 +37,7 @@
     "codecov": "3.8.2",
     "jest": "27.0.4",
     "raf": "3.4.1",
-    "rollup": "3.6.0",
+    "rollup": "3.7.0",
     "rollup-plugin-babel": "4.4.0",
     "uglify-js": "3.17.4",
     "semantic-release": "19.0.5"
