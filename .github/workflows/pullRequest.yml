@@ -1,0 +1,26 @@
+# .github/workflows/release.yml
+
+name: Pull Request
+
+on: pull_request
+jobs:
+  test:
+    name: Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - name: Run install
+        run: yarn install --frozen-lockfile
+      - name: Test
+        run: yarn test
+      - name: Build
+        run: yarn build
+      - name: Report Coverage
+        run: yarn report-coverage
