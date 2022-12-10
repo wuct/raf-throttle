@@ -17,17 +17,17 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 14
-      - name: Install dependencies
-        run: npm ci
+      - name: Run install
+        run: yarn install --frozen-lockfile
       - name: Test
-        run: npm run test
+        run: yarn test
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: echo "release dry run"
-      #   run: npx semantic-release
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release
