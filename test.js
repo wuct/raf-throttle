@@ -33,7 +33,7 @@ test('call the callback with arguments', done => {
   })
 })
 
-test('preserve the context of the first call', done => {
+test('preserves the context of the first call', done => {
   expect.assertions(1)
 
   const callbackSpy = jest.fn()
@@ -47,8 +47,13 @@ test('preserve the context of the first call', done => {
   c2.throttled()
 
   raf(() => {
-    expect(callbackSpy.mock.instances[0]).toBe(c1)
-    done()
+    const c3 = { throttled }
+    c3.throttled()
+
+    raf(() => {
+      expect(callbackSpy.mock.instances[1]).toBe(c1)
+      done()
+    })
   })
 })
 
