@@ -32,7 +32,7 @@
   "devDependencies": {
     "@babel/cli": "7.28.6",
     "@babel/core": "7.29.0",
-    "@babel/preset-env": "7.29.0",
+    "@babel/preset-env": "7.29.2",
     "babel-jest": "29.7.0",
     "codecov": "3.8.3",
     "jest": "29.7.0",
